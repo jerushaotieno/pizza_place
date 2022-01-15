@@ -7,6 +7,7 @@
     <title>Pizza Place</title>
 </head>
 <body>
+<!--Navbar-->
     <div class="navbar">
         <img src="img/logo.jpeg" alt="pizza_animation_slice" height="50px" width="50px">
 
@@ -19,6 +20,7 @@
         </p>
     </div>
 
+<!--Introduction-->
     <div class="introduction">
         <p>
             Craving a pizza? Our great selection of pizzas are handmade from scratch to give you the home-cooked food experience wherever you are. 
@@ -35,6 +37,7 @@
         </div>
     </div>
 
+<!--Pizza Choice-->
     <div class="pizza_choice">
         <p>
             Wondering which type of pizza to choose? Take a look at some of our classic pizza for ideas.
@@ -59,6 +62,7 @@
         </ul>
     </div>
 
+<!--Create your own pizza-->
     <div class="create_pizza">
         <h2>
             Create Your Own Pizza
@@ -143,9 +147,14 @@
             <p>
                 All toppings cost KES 150 each
             </p>
+
+            <div class="button">
+                <button>Add</button>
+            </div>
         </div>
     </div>
 
+<!--checkout Cart-->
     <div checkout_cart>
         <table class="checkout_cart">
             <thead>
@@ -155,7 +164,7 @@
                     <th>Crust</th>
                     <th>Toppings</th>
                     <th>Quantity</th>
-                    <th>Total</th>
+                    <th>Sub-total</th>
                 </tr>
             </thead>
 
@@ -169,9 +178,39 @@
             </tbody>
         </table>
 
-        <div>
-            
+        <!--Total Cost-->
+        <div class="total_cost">
+            <p class="total">
+                Total Cost: KES <span class="bold_text">0</span>
+            </p>
         </div>
+
+        <div class="button">
+            <button>Proceed</button>
+        </div>
+    </div>
+
+<!--Pizza Delivery-->
+    <div class="choose_delivery_method">
+        <h5>
+            Choose a Deliery Method
+        </h5>
+
+        <div class="delivery_form">
+            <input class="delivery_method" type="radio" name="delivery_method" id="pickup" value="pickup">
+            <label class="option" for="method_one">
+                Pickup
+            </label>
+        </div>
+
+        <div class="delivery_form">
+            <input class="delivery_method" type="radio" name="delivery_method" id="pickup" value="pickup">
+            <label class="option" for="method_two">
+                Deliver to location of choice (Please add your location. Deliveries cost KES 150 within Nairobi CBD and KES 300 within a 6km radius.)
+            </label>
+        </div>
+
+        
     </div>
 </body>
 </html>
