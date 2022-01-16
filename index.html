@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.css" rel ="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Pizza Place</title>
 </head>
 <body>
 <!--Introduction-->
-
+<navbar>
+    <img src="img/logo.jpeg" alt="animation_of_a_pizza_slice" height="50px" width="50px">
+</navbar>
     <div class="introduction">
         <div class="introduction_content">    
             <h1 id="pizza_house">
@@ -33,7 +36,7 @@
         </div>        
         
         <div class="introduction_image">
-            <img src="img/pizza_with_onion_and_tomato_topping.jpg" alt="pizza_with_ham_topping_in_furnace" height="600" width="600">
+            <img src="img/pizza_with_onion_and_tomato_topping.jpg" alt="pizza_with_ham_topping_in_furnace" height="500" width="600">
         </div>
     </div>
 
@@ -131,12 +134,31 @@
             </h3>
 
             <form>
-                <select name="Choose Toppings" id="choose_toppings">
-                    <option value="choose toppings">Choose Toppings</option>
-                    <option value="pepperoni">Pepperoni</option>
-                    <option value="mushrooms">Mushrooms</option>
-                    <option value="onions">Onions</option>
-                    <option value="sausage">Sausage</option>
+                <div class="toppings">
+                    <input type="checkbox" value="pepperoni" name="toppings" id="pepperoni">
+                    <label for="pepperoni">Pepperoni</label>
+                </div>
+
+                <div class="toppings">
+                    <input type="checkbox" value="mushrooms" name="toppings" id="mushrooms">
+                    <label for="mushrooms">Mushrooms</label>
+                </div>
+
+                <div class="toppings">
+                    <input type="checkbox" value="onions" name="toppings" id="onions">
+                    <label for="onions">Onions</label>
+                </div>
+
+                <div class="toppings">
+                    <input type="checkbox" value="sausage" name="toppings" id="sausage">
+                    <label for="sausage">Sausage</label>
+                </div>
+                
+                <div class="toppings">
+                    <input type="checkbox" value="bac" name="toppings" id="pepperoni">
+                    <label for="pepperoni">Pepperoni</label>
+                </div>
+
                     <option value="bacon">Bacon</option>
                     <option value="extra cheese">Extra Cheese</option>
                     <option value="black olives">Black Olives</option>
@@ -308,5 +330,7 @@
             Copyright &copy; Jerusha Otieno 2021
         </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
