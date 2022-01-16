@@ -21,7 +21,7 @@ week you were born depending on your birthday and gender after which it gives yo
 * Output for each user should for example read “My Akan name is Adwoa”.
 
 ## Link to Live Site on GitHub Pages
-https://jerushaotieno.github.io/akan_name/
+https://jerushaotieno.github.io/pizza_place/
 
 ## Link to Project Figma Design
 https://www.figma.com/file/8YtIkULNwHtGgaXew3Cwyy/Akan-Name-Generator
