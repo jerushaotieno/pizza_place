@@ -1,6 +1,6 @@
 body{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 .introduction{
@@ -77,9 +77,24 @@ body{
 }
 
 .toppings_row_one{
-    padding-right: 3%;
+    padding-right: 5%;
 }
 
 .footer{
+    font-size: x-small;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3%;
+    text-align: center;
+}
+
+.about_us{
+    width: 500px;
+    padding-left: 3%;
+}
+
+.copyright{
     font-size: xx-small;
+    text-align: center;
+    justify-content: center;
 }
