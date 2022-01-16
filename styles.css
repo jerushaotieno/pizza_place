@@ -1,6 +1,6 @@
 body{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .introduction{
@@ -43,15 +43,43 @@ body{
 .classic_pizza{
     text-align: center;
     justify-content: center;
-    height: 500px;
+    height: 500px;;
 }
 
 #classic_pizza{
     padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 1%;
 }
 
 .ul{
     list-style-type: none;
     line-height: 30px;
+}
+
+.create_pizza{
+    display: flex;
+    margin: 3%;
+}
+
+.create_pizza_heading{
+    text-align: center;
+    justify-content: center;
+}
+
+.order_details{
+    padding-right: 3%;
+    width: 50%;
+    border-right: white;
+}
+
+.toppings_rows{
+    display: flex;
+}
+
+.toppings_row_one{
+    padding-right: 3%;
+}
+
+.footer{
+    font-size: xx-small;
 }
