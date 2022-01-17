@@ -56,11 +56,6 @@ body{
     line-height: 30px;
 }
 
-.create_pizza{
-    display: flex;
-    margin: 3%;
-}
-
 .create_pizza_heading{
     text-align: center;
     justify-content: center;

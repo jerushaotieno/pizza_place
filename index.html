@@ -29,7 +29,7 @@
             </p>
     
             <div class="introduction_button">
-                <button class="button">
+                <button class="button" id="order_now">
                     Order Now!
                 </button>
             </div>
@@ -130,7 +130,7 @@
                 </p>
             </div>
     
-            <div class="choose_size">
+            <div class="choose_toppings">
                 <h3>
                     Choose Toppings
                 </h3>
@@ -267,54 +267,36 @@
                     All toppings cost KES 150 each
                 </p>
     
-                <div class="button">
+                <div class="add_button">
                     <button>Add</button>
                 </div>
             </div>
         </div>
 
+<!--Checkout Cart Details-->
         <div class="checkout">
-            <!--checkout Cart-->
-    <div checkout_cart>
-        <table class="checkout_cart">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Size</th>
-                    <th>Crust</th>
-                    <th>Toppings</th>
-                    <th>Quantity</th>
-                    <th>Sub-total</th>
-                </tr>
-            </thead>
+            <div checkout_cart>
+                <table class="checkout_cart">
+                    <thead>
+                        <tr>
+                            <th>Size</th>
+                            <th>Crust</th>
+                            <th>Toppings</th>
+                            <th>Sub-total</th>
+                        </tr>
+                    </thead>
 
-            <tbody>
-                <tr>
-                    <td class="empty_cart_icon">
-                        <img src="img/empty-cart.png" alt="empty_cart_icon"> <br>
-                        Your cart is empty!
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                    <tbody class="existing_order">
+                        <tr>
+                            <td id="size"></td>
+                            <td id="crust"></td>
+                            <td id="toppings"></td>
+                            <td id="sub_total"></td>
+                        </tr>
+                    </tbody>
+                </table>
 
-        <!--Total Cost-->
-        <div class="total_cost">
-            <p class="total">
-                Total Cost: KES <span class="bold_text">0</span>
-            </p>
-        </div>
-
-        <div class="button">
-            <button>Proceed</button>
-        </div>
-    </div>
-        </div>
-    </div>
-
-
-
-<!--Pizza Delivery-->
+                <!--Pizza Delivery-->
     <div class="choose_delivery_method">
         <h5>
             Choose a Delivery Method
@@ -330,8 +312,12 @@
         <div class="delivery_form">
             <input class="delivery_method" type="radio" name="delivery_method" id="pickup" value="pickup">
             <label class="option" for="method_two">
-                Deliver to location of choice (Please add your location. Deliveries cost KES 150 within Nairobi CBD and KES 300 within a 6km radius.)
+                Deliver to location of choice (Please add your location. Deliveries cost KES 300 within a 6km radius from the CBD.)
             </label>
+        </div>
+
+        <div class="delivery_form">
+            <input class="button" type="submit" name="delivery_method" id="add_order" value="Add Order">
         </div>
 
         <div class="delivery_details">
@@ -374,6 +360,13 @@
             
         </div>
     </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
     <footer class="footer">
         <div class="about_us">
