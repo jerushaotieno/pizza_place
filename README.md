@@ -39,4 +39,4 @@ Email: jerushaotienocoding@gmail.com
 ### License
 [GNU License](./LICENSE)
 
-Copyright (c) [2021] **Jerusha Otieno**
+Copyright (c) [2022] **Jerusha Otieno**
