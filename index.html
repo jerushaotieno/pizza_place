@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">-->
     <link rel="stylesheet" href="bootstrap.css" rel ="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -29,10 +31,8 @@
             </p>
     
             <div class="introduction_button">
-                <button class="button" id="order_now">
-                    Order Now!
-                </button>
-            </div>
+                <input type="button" value="Order Now!" class="button" id="order_now">
+            </div>            
         </div>        
         
         <div class="introduction_image">
@@ -77,204 +77,219 @@
                     <li>Veg Feast (sweetcorn, green pepper, chilli & onion)</li>
                     <li>Veg Tikka (sweetcorn, red & green pepper mushroom, onion, jalapeños & tikka sauce)</li>
                 </ul>
-            </div>
+
+                <div class="introduction_button">
+                    <input type="button" value="Order Now!" class="button" id="order_now">
+                </div> 
+            </div> 
         </div>
     </div>
 
-<!--Create your own pizza-->
-    <div class="create_pizza_heading">
-        <h2>
-            Create Your Own Pizza
-        </h2>
-    </div>
+    
 
+<!--Create your own pizza-->
     <div class="create_pizza">
-        <div class="order_details">
-            <div class="choose_size">
+        <form id="create_pizza_form" class="form" name="create_pizza_form" action="">
+            <legend>
+                <div class="create_pizza_heading">
+                    <h2>
+                        Create Your Own Pizza
+                    </h2>
+                </div>
+            </legend>
+
+            <label for="choose_size">
                 <h3>
                     Choose Size
                 </h3>
-    
-                <form>
+            </label>
+
+            <div class="order_details">
+                <div class="choose_size">
                     <select name="Choose Size" id="choose_size">
                         <option value="choose size">Choose Size</option>
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                        <option value="mega">Mega</option>
+                        <option value="small">Small (KES 200)</option>
+                        <option value="medium">Medium (KES 400)</option>
+                        <option value="large">Large (KES 600)</option>
+                        <option value="mega">Mega (KES 800)</option>
                     </select>
-                </form>
+                </div>
             </div>
-    
-            <div class="choose_size">
+
+            <label for="choose_crust">
                 <h3>
                     Choose Crust
                 </h3>
+            </label>
+
+            <p>
+                All crusts cost KES 300 each
+            </p>
+            
+            <div class="choose_size">
+                <select name="Choose Crust" id="choose_crust">
+                    <option value="choose crust">Choose Crust</option>
+                    <option value="crispy crust">Crispy Crust</option>
+                    <option value="stuffed crust">Stuffed Crust</option>
+                    <option value="gluten-free crust">Gluten-free Crust</option>
+                    <option value="cracker crust">Cracker Crust</option>
+                    <option value="flat-bread crust">Flat-bread Crust</option>
+                    <option value="thin crust">Thin Crust</option>
+                    <option value="cheese crust">Cheese Crust</option>
+                    <option value="thick crust">Thick Crust</option>
+                </select>
     
-                <form>
-                    <select name="Choose Crust" id="choose_crust">
-                        <option value="choose crust">Choose Crust</option>
-                        <option value="crispy crust">Crispy Crust</option>
-                        <option value="stuffed crust">Stuffed Crust</option>
-                        <option value="gluten-free crust">Gluten-free Crust</option>
-                        <option value="cracker crust">Cracker Crust</option>
-                        <option value="flat-bread crust">Flat-bread Crust</option>
-                        <option value="thin crust">Thin Crust</option>
-                        <option value="cheese crust">Cheese Crust</option>
-                        <option value="thick crust">Thick Crust</option>
-                    </select>
-                </form>
-    
-                <p>
-                    All crusts cost KES 300 each
-                </p>
             </div>
-    
-            <div class="choose_toppings">
+
+            <label for="choose_toppings">
                 <h3>
                     Choose Toppings
                 </h3>
-    
-                <form>
-                    <div class="toppings_rows">
-                        <div class="toppings_row_one">
-                            <div class="toppings">
-                                <input type="checkbox" value="pepperoni" name="toppings" id="pepperoni">
-                                <label for="pepperoni">Pepperoni</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="mushrooms" name="toppings" id="mushrooms">
-                                <label for="mushrooms">Mushrooms</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="onions" name="toppings" id="onions">
-                                <label for="onions">Onions</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="sausage" name="toppings" id="sausage">
-                                <label for="sausage">Sausage</label>
-                            </div>
-                            
-                            <div class="toppings">
-                                <input type="checkbox" value="bacon" name="toppings" id="bacon">
-                                <label for="bacon">Bacon</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="extra cheesei" name="toppings" id="extra cheese">
-                                <label for="extra cheese">Extra Cheese</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="black olives" name="toppings" id="black olives">
-                                <label for="black olives">Black Olives</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="green peppers" name="toppings" id="green peppers">
-                                <label for="green peppers">Green Peppers</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="red peppers" name="toppings" id="red peppers">
-                                <label for="red peppers">Red Peppers</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="pineapple" name="toppings" id="pineapple">
-                                <label for="pineapple">Pineapple</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="spinach" name="toppings" id="spinach">
-                                <label for="spinach">Spinach</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="marinated bbq steak" name="toppings" id="marinated bbq steak">
-                                <label for="marinated bbq steak">Marinated BBQ Steak</label>
-                            </div>
-                        </div>
+            </label>
 
-                        <div class="toppings_row_two">
-                            <div class="toppings">
-                                <input type="checkbox" value="beef mince" name="toppings" id="beef mince">
-                                <label for="beef mince">Beef Mince</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="fresh tomato" name="toppings" id="fresh tomato">
-                                <label for="fresh tomato">Fresh Tomato</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="bbq chicken" name="toppings" id="bbq chicken">
-                                <label for="bbq chicken">BBQ Chicken</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="creamy mayo" name="toppings" id="creamy mayo">
-                                <label for="creamy mayo">Creamy Mayo/label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="marinated tikka chicken" name="toppings" id="marinated tikka chicken">
-                                <label for="marinated tikka chicken">Marinated Tikka Chicken</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="macon" name="toppings" id="macon">
-                                <label for="macon">Macon</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="spicy peri-peri & chicken" name="toppings" id="spicy peri-peri chicken">
-                                <label for="spicy peri-peri chicken">Spicy Peri-peri Chicken</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="olives feta cheese" name="toppings" id="olives feta cheese">
-                                <label for="olives feta cheese">Olives Feta Cheese</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="sweetcorn" name="toppings" id="sweetcorn">
-                                <label for="sweetcorn">Sweetcorn</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="chilli" name="toppings" id="chilli">
-                                <label for="chilli">Chilli</label>
-                            </div>   
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="jalapeños" name="toppings" id="jalapeños">
-                                <label for="jalapeños">Jalapeños</label>
-                            </div>
-            
-                            <div class="toppings">
-                                <input type="checkbox" value="tikka sauce" name="toppings" id="tikka sauce">
-                                <label for="tikka sauce">Tikka Sauce</label>
-                            </div>
+            <p>
+                All toppings cost KES 150 each
+            </p>
+
+            <div class="choose_toppings">
+                <div class="toppings_rows">
+                    <div class="toppings_row_one">
+                        <div class="checkbox">
+                            <input type="checkbox" value="pepperoni" name="toppings" id="pepperoni">
+                            <label for="pepperoni">Pepperoni</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="mushrooms" name="toppings" id="mushrooms">
+                            <label for="mushrooms">Mushrooms</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="onions" name="toppings" id="onions">
+                            <label for="onions">Onions</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="sausage" name="toppings" id="sausage">
+                            <label for="sausage">Sausage</label>
+                        </div>
+                        
+                        <div class="checkbox">
+                            <input type="checkbox" value="bacon" name="toppings" id="bacon">
+                            <label for="bacon">Bacon</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="extra cheesei" name="toppings" id="extra cheese">
+                            <label for="extra cheese">Extra Cheese</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="black olives" name="toppings" id="black olives">
+                            <label for="black olives">Black Olives</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="green peppers" name="toppings" id="green peppers">
+                            <label for="green peppers">Green Peppers</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="red peppers" name="toppings" id="red peppers">
+                            <label for="red peppers">Red Peppers</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="pineapple" name="toppings" id="pineapple">
+                            <label for="pineapple">Pineapple</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="spinach" name="toppings" id="spinach">
+                            <label for="spinach">Spinach</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="marinated bbq steak" name="toppings" id="marinated bbq steak">
+                            <label for="marinated bbq steak">Marinated BBQ Steak</label>
                         </div>
                     </div>
-                </form>
-    
-                <p>
-                    All toppings cost KES 150 each
-                </p>
-    
-                <div class="add_button">
-                    <button>Add</button>
+
+                    <div class="toppings_row_two">
+                        <div class="checkbox">
+                            <input type="checkbox" value="beef mince" name="toppings" id="beef mince">
+                            <label for="beef mince">Beef Mince</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="fresh tomato" name="toppings" id="fresh tomato">
+                            <label for="fresh tomato">Fresh Tomato</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="bbq chicken" name="toppings" id="bbq chicken">
+                            <label for="bbq chicken">BBQ Chicken</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="creamy mayo" name="toppings" id="creamy mayo">
+                            <label for="creamy mayo">Creamy Mayo/label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="marinated tikka chicken" name="toppings" id="marinated tikka chicken">
+                            <label for="marinated tikka chicken">Marinated Tikka Chicken</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="macon" name="toppings" id="macon">
+                            <label for="macon">Macon</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="spicy peri-peri & chicken" name="toppings" id="spicy peri-peri chicken">
+                            <label for="spicy peri-peri chicken">Spicy Peri-peri Chicken</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="olives feta cheese" name="toppings" id="olives feta cheese">
+                            <label for="olives feta cheese">Olives Feta Cheese</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="sweetcorn" name="toppings" id="sweetcorn">
+                            <label for="sweetcorn">Sweetcorn</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="chilli" name="toppings" id="chilli">
+                            <label for="chilli">Chilli</label>
+                        </div>   
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="jalapeños" name="toppings" id="jalapeños">
+                            <label for="jalapeños">Jalapeños</label>
+                        </div>
+        
+                        <div class="checkbox">
+                            <input type="checkbox" value="tikka sauce" name="toppings" id="tikka sauce">
+                            <label for="tikka sauce">Tikka Sauce</label>
+                        </div>
+                    </div>
                 </div>
+
+                <input type="submit" value="Add" class="add_button" id="add">
+                <div class="output"></div>
             </div>
-        </div>
+        </form>
+    </div>
 
 <!--Checkout Cart Details-->
         <div class="checkout">
+            <h2>Please confirm your order
+
+            </h2>
+
             <div checkout_cart>
                 <table class="checkout_cart">
                     <thead>
@@ -303,18 +318,15 @@
         </h5>
 
         <div class="delivery_form">
-            <input class="delivery_method" type="radio" name="delivery_method" id="pickup" value="pickup">
-            <label class="option" for="method_one">
-                Pickup
-            </label>
-        </div>
-
-        <div class="delivery_form">
-            <input class="delivery_method" type="radio" name="delivery_method" id="pickup" value="pickup">
-            <label class="option" for="method_two">
-                Deliver to location of choice (Please add your location. Deliveries cost KES 300 within a 6km radius from the CBD.)
-            </label>
-        </div>
+            <input class="delivery_method" type="button" name="delivery_method" id="pickup" value="Pickup">
+        </div> <span>
+            <div class="delivery_form">
+                <input class="delivery_method" type="button" name="delivery_method" id="delivery" value="Delivery">
+                <label class="option" for="method_two">
+                    Deliver to location of choice (Please add your location. <br>Deliveries cost KES 300 within a 6km radius from the CBD.)
+                </label>
+            </div>
+        </span>
 
         <div class="delivery_form">
             <input class="button" type="submit" name="delivery_method" id="add_order" value="Add Order">
@@ -354,19 +366,6 @@
                 </div>
             </form>
         </div>
-
-<!--Order Summary-->
-        <div class="order_summary">
-            
-        </div>
-    </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
 
     <footer class="footer">
         <div class="about_us">

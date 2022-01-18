@@ -43,7 +43,7 @@ body{
 .classic_pizza{
     text-align: center;
     justify-content: center;
-    height: 500px;;
+    height: 400px;;
 }
 
 #classic_pizza{
@@ -56,15 +56,10 @@ body{
     line-height: 30px;
 }
 
+
 .create_pizza_heading{
     text-align: center;
     justify-content: center;
-}
-
-.order_details{
-    padding-right: 3%;
-    width: 50%;
-    border-right: white;
 }
 
 .toppings_rows{

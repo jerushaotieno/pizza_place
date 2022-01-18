@@ -5,7 +5,7 @@ function Pizza(size, crust, toppings) {
     this.toppings = toppings;
 }
 
-var sizePrice, crustPrice, toppingPrice;
+var sizePrice, crustPrice, toppingsPrice;
 
 //calculation for the price of a pizza
 var price = function(size, crust, toppings) {
@@ -27,7 +27,8 @@ var price = function(size, crust, toppings) {
             break;
         default:
             location.reload();
-};
+            // alert("Please choose a pizza size");
+    };
 
     switch (crust) {
         case "":
@@ -59,6 +60,7 @@ var price = function(size, crust, toppings) {
             break;
         default:
             location.reload();
+            // alert("Please choose a crust");
     };
 
     if (size == 'mega') {
@@ -79,15 +81,15 @@ var price = function(size, crust, toppings) {
 
 $(document).ready(function() {
     $("#order_now").click(function() {
-        $(".order_details").show();
+        $(".create_pizza").show();
         $(".button").hide();
     })
 
 //Add button
-$(".add_button").click(function(event) {
+$("#add").click(function(event) {
     event.preventDefault();
     $(".checkout").show();
-    $(".order_details").hide();
+    $(".create_pizza").hide();
 
 //getting order details
     let size = $("#size option:selected").val();
@@ -98,7 +100,7 @@ $(".add_button").click(function(event) {
     });
 
     var subTotal = price(size, crust, toppings);
-    var Total = total + 300;
+    var Total = subTotal + 300;
     var order = new Pizza(size, crust, toppings)
     $(".existing_order").append('<tr><td id="name">' + '</td><td id="size">' + order.size + '</td><td id="crust">' + order.crust + '</td><td id="toppings">' + order.toppings + '</td><td id="sub_total">' + sub-total);
 
@@ -121,10 +123,10 @@ $(".add_button").click(function(event) {
         var clientLocation = $("#additional_details").val();
 
         if (clientName === "" || clientNumber === "" || clientEmail === "" || clientLocation === "") {
-            alert("Please fill in all the detail fields in the delivery form.")
+            alert("Please fill in all the fields in the delivery form.")
         } else {
-            alert("Dear " + clientName + " we will deliver your order to " + clientLocation + " in an hour! Your total order total is: " +
-                Total + " We will contact on call upon arrival");
+            alert("Dear " + clientName + ", Thank you for your order. Your order will be delivered to " + clientLocation + " in an hour! Your total order total is: " +
+                Total + " We'll call you upon arrival");
         }
     })
 })
@@ -134,10 +136,10 @@ $(".add_button").click(function(event) {
 $("#add_order").click(function(event) {
     event.preventDefault();
 
-        //Add an extra order
+//Add an extra order
         $(".checkout").hide();
         $(".delivery_details").hide();
-        $(".order_details").show();
+        $(".create_pizza").show();
         document.getElementById("form1").reset();
     })
 
